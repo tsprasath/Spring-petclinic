@@ -6,7 +6,6 @@ pipeline {
     }
     stages {
           stage('Build and package') {
-            agent { docker 'maven:3.5-alpine' }
             steps {
                 sh 'mvn -B package -DskipTests'
                 }
